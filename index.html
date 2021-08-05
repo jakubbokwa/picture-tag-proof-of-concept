@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture tag training</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+        <picture>
+            <source
+            media="(orientation: portrait)"
+            srcset="port-pic-200.jpg 200w, port-pic-300.jpg 300w, port-pic-600.jpg 600w"
+        sizes="60vw"
+        >
+            
+            <source
+            media="(orientation: landscape) and (min-width: 1200px)"
+            srcset="land-pic-1170.jpg 1170w, land-pic-1000.jpg 1000w"
+        sizes="(max-width: 1000px) 80vw, 60vw"
+        >
+            <img src="land-pic-800.jpg" alt="Picture of a squirrel">
+        </picture>
+</body>
+</html>
